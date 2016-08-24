@@ -6,7 +6,7 @@ var moment = require('moment');
 module.exports = {
   generate: function generate() {
 
-    var utcDateTime = moment.utc().format('YYYYMMDDTHHmmss');
+    var utcDateTime = moment.utc().format('YYYYMMDDHHmmss');
     var uid = shortid.generate();
 
     var orderNo = '' + utcDateTime + uid;
