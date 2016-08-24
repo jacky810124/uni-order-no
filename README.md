@@ -4,7 +4,7 @@
 
 ## Install
 
-```javascript
+```
 npm install uni-order-no --save
 ```
 
