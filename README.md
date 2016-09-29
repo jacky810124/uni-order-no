@@ -15,13 +15,13 @@ npm install uni-order-no --save
 const orderNoGenerator = require('uni-order-no').generate;
 
 // Default will generates string which consists date time string and 6 lower case letters.
-console.log(noGenerator());
+console.log(orderNoGenerator());
 // Result: 20160929115608gvrjqy
 
 
 // You can assign letter's length.
 // For example: I assign length = 10, so I can get a string consists date time string and 10 lower case letters.
-console.log(noGenerator({
+console.log(orderNoGenerator({
   length: 10,
 }));
 // Result: 20160929115608ofbdrltopi
