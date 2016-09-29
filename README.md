@@ -21,8 +21,8 @@ console.log(noGenerator());
 // Result: 20160929115608gvrjqy
 
 
-// You can specific letter's length.
-// For example: I specific length = 10, so I can get a string consists date time string and 10 lower case letters.
+// You can assign letter's length.
+// For example: I assign length = 10, so I can get a string consists date time string and 10 lower case letters.
 console.log(noGenerator({
   length: 10,
 }));
