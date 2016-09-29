@@ -1,16 +1,1 @@
-'use strict';
-
-var shortid = require('shortid');
-var moment = require('moment');
-
-module.exports = {
-  generate: function generate() {
-
-    var utcDateTime = moment.utc().format('YYYYMMDDHHmmss');
-    var uid = shortid.generate();
-
-    var orderNo = '' + utcDateTime + uid;
-
-    return orderNo;
-  }
-};
+'use strict';var passwordGenerator=require('generate-password'),moment=require('moment');module.exports={generate:function generate(a){var b={uppercase:!1,length:6};a&&0<Object.keys(a).filter(function(e){return a[e]!==void 0}).length&&(b=Object.assign({},b,{length:a.length}));var c=moment.utc().format('YYYYMMDDHHmmss'),d=passwordGenerator.generate(b);return''+c+d}};

@@ -1,14 +1,22 @@
-const shortid = require('shortid');
+const passwordGenerator = require('generate-password');
 const moment = require('moment');
 
 module.exports = {
-  generate() {
+  generate(options) {
+
+    let opt = { uppercase: false, length: 6, };
+
+    if (options && Object.keys(options).filter(key => options[key] !== undefined).length > 0) {
+
+      opt = Object.assign({}, opt, {
+        length: options.length,
+      });
+
+    }
 
     const utcDateTime = moment.utc().format('YYYYMMDDHHmmss');
-    const uid = shortid.generate();
+    const uid = passwordGenerator.generate(opt);
 
-    const orderNo = `${utcDateTime}${uid}`;
-
-    return orderNo;
+    return `${utcDateTime}${uid}`;
   }
 };
